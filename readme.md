@@ -1,6 +1,6 @@
 <h1>A progression from Blink3!</h1>
 
-Moving now to HTML browser (soon to be displayable in a electron window for easy desktop use).
+Moving now to HTML (in browser - soon to be displayable in a electron window for easy desktop use).
 
 Interacts with [Blinksticks]('http://blinkstick.com') and allows for easy control of many presets.
 
