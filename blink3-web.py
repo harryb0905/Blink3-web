@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect
 from blinkstick import blinkstick
 app = Flask(__name__)
 
+
 @app.route("/")
 def hello():
     return render_template('home.html')
@@ -33,9 +34,10 @@ def blinkpreset():
 
 @app.route("/custom", methods=['POST'])
 def blinkcustom():
+    var1 = "#" + request.form['color']
     for bstick in blinkstick.find_all():
-                 bstick.set_color(hex=request.form['color'])
-    print('status: blinkstick color - ' + request.form['color'])    
+                 bstick.set_color(hex=var1)
+    print(var1)  
     return redirect("/")
 
 

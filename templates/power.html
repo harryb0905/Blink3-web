@@ -1,0 +1,40 @@
+
+<h4>Power</h4>
+
+<div style="display:inline-block">
+	<form action="/on" method="post" action="about:blank">
+		<input type="submit" name="bstickon" value="On">
+	</form>
+
+	<form action="/off" method="post" action="about:blank">
+		<input type="submit" name="bstickoff" value="Off">
+	</form>
+</div>
+
+<hr>
+
+<h4> Preset Colors </h4>
+
+
+<form action="/preset" method="post" id="custom" action="about:blank">
+  <input type="radio" name="color" onChange='this.form.submit();' value="red" > Red<br>
+  <input type="radio" name="color" onChange='this.form.submit();' value="blue" > Blue<br>
+  <input type="radio" name="color" onChange='this.form.submit();' value="green" > Green<br>
+  <input type="radio" name="color" onChange='this.form.submit();' value="yellow" > Yellow<br>
+  <input type="radio" name="color" onChange='this.form.submit();' value="white" > White<br>
+  <input type="radio" name="color" onChange='this.form.submit();' value="grey" > Grey<br>
+  <input type="radio" name="color" onChange='this.form.submit();' value="blue" > Purple<br>
+</form>
+
+<hr>
+
+<h4>Custom Colour (pick your own color to change the blinkstick to:) </h4><br>
+
+<form action="/custom" method="post" id="custom" action="about:blank">
+	<script src="{{ url_for('static', filename='js/jscolor.js') }}"></script>
+	<input  onChange='this.form.submit();' name="color" class="jscolor" id="color" />
+	<noscript><input type="submit" name="bstickoff" value="Change"></noscript>
+
+</form>
+
+<hr>
